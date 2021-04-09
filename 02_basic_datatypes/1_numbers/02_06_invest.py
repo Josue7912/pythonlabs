@@ -11,4 +11,4 @@ PV = 50000
 r = 2.5
 n = 30
 FV = PV * (1+r/100)**n
-print(FV)
+print(f"Future value is {FV}")
