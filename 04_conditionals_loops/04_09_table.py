@@ -8,3 +8,5 @@ Use a loop to print the following table to the console:
  40 41 42 43 44 45 46 47 48 49
 
 '''
+for i in range(0, 50, 10):
+    print(" ".join([str(j) for j in range(i, i+10)]))

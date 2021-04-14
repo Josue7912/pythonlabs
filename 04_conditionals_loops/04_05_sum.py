@@ -7,3 +7,10 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+sum = 0
+start = int(input("Enter low interval number: "))
+end = int(input("Enter top interval number: "))
+
+for num in range (start, end+1):
+    sum += num
+print("The sum is ", sum)
