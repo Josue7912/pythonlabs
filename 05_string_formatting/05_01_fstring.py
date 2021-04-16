@@ -18,3 +18,12 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
+
+for d in famous_quotes:
+    full_name = d["full_name"]
+    quote = d["quote"]
+    name_split = full_name.split()
+    name_rev = name_split.reverse()
+    result = ", ".join(name_split)
+    #print(result)
+    print(f"{quote} - {result}")
