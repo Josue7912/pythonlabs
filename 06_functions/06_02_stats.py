@@ -6,8 +6,14 @@ Print these values to the console when calling the function.
 
 example_list = [1, 2, 3, 4, 5, 6, 7]
 
-def stats():
+def stats(numlist):
   # define the function here
-  pass
+  maximum = max(numlist)
+  minimum = min(numlist)
+  average = sum(numlist) / len(numlist)
+  summ = sum(numlist)
+  return maximum, minimum, average, summ
 
 # call the function below here
+
+print(stats(example_list))
