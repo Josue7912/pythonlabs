@@ -10,3 +10,15 @@ into different files. Note that you will run into an error when attempting to im
 because Python modules can't begin with a number.
 
 '''
+
+class TestMath(unittest.TestCase):
+    def test_check_equality(self):
+        def square(x):
+            y = x * x
+            return y
+        x = 10
+        expected_result = 100
+        self.assertEquals(square(x), expected_result)
+
+if __name__ == '__main__':
+  unittest.main()

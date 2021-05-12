@@ -5,3 +5,4 @@ Using list comprehension, create a list "positive" from the list
 '''
 
 numbers = [5, -8, 3, 10, -19, -22, 44, 2, -1, 4, 42]
+print([n for n in numbers if n > 0 ])

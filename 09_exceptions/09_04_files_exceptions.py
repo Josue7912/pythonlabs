@@ -1,5 +1,5 @@
 '''
-In this exercise, you will practice both File I/O as well as using Exceptions
+In this exercise, you will practice both File I\\O as well as using Exceptions
 in a real-world scenario.
 
 You have a folder containing three text files of books from Project Gutenberg:
@@ -23,3 +23,19 @@ BONUS CHALLENGE: write a custom Exception that inherits from Exception and raise
 first 100 characters of any of the files contain the string "Prince".
 
 '''
+#Question 1
+#file =  open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\war_and_peace.txt", encoding="utf-8")
+#filetext = file.readlines()
+
+#Question 2
+#with open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\crime_and_punishment.txt",  "w") as fout:
+    #fout.write("\n")
+
+#Question 3
+while True:
+    book1 = open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\war_and_peace.txt", encoding="utf-8")
+    book2 = open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\crime_and_punishment.txt", encoding="utf-8")
+    book3 = open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\pride_and_prejudice.txt", encoding="utf-8")
+    print(book1.read()[:1])
+    print(book2.read()[:1])
+    print(book3.read()[:1])
