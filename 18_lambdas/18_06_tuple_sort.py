@@ -8,3 +8,7 @@ sorted_list = [('second_element', 2), ('first_element', 4), ('third_element', 6)
 '''
 
 unsorted_list = [('first_element', 4), ('second_element', 2), ('third_element', 6)]
+print("Original list of tuples: "+str(unsorted_list))
+
+unsorted_list.sort(key = lambda x: x[1])
+print("Sorting the list of tuples: "+str(unsorted_list))
