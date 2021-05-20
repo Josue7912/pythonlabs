@@ -4,3 +4,5 @@ Create a lambda expression that takes no input and prints "hello world" to the c
 What does it return?
 
 '''
+msg = lambda: "Hello World"
+print(msg())
