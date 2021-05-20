@@ -24,12 +24,12 @@ first 100 characters of any of the files contain the string "Prince".
 
 '''
 #Question 1
-#file =  open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\war_and_peace.txt", encoding="utf-8")
-#filetext = file.readlines()
+file =  open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\war_and_peace.txt", encoding="utf-8")
+filetext = file.readlines()
 
 #Question 2
-#with open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\crime_and_punishment.txt",  "w") as fout:
-    #fout.write("")
+with open("C:\\Users\\poncejo\\OneDrive - HP Inc\\CodingNomads\\labs\\python_fundamentals-master\\09_exceptions\\books\\crime_and_punishment.txt",  "w") as fout:
+    fout.write("")
 
 #Question 3
 import glob, os
