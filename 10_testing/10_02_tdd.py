@@ -8,3 +8,7 @@ fail and write tests that will check and prevent failure.
 You do not need to implement the actual functions after writing the tests but you may.
 
 '''
+def add(a, b):
+    pass
+
+assert(add(3, 4) == 7)

@@ -7,7 +7,9 @@ def decorator_func(fn):
     return wrapper_func
 
 @decorator_func
-def prettify():
-    return "flowers for you"
+def prettify(phrase):
+    return phrase
 
-print(prettify())
+#phrase = "It's a good day!"
+
+print(prettify("My name is Joe"))
