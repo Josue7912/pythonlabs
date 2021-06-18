@@ -3,3 +3,4 @@ venv
 .DS_Store
 _unused
 rename.py
+capstone-twitter/twittercredentials.txt
