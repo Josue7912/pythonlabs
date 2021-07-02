@@ -18,7 +18,16 @@ In this project I had to collect data from a bunch of tweets using Tweepy python
 - The average number of tweets from an individual user.
 - The hour with the greatest number of tweets.
 
-Once I got all the information using functions, you are asked to post data to a MySQL Database (used MySQL Workbench).
+**How to make it work?**
+--------------------
+
+First of all, you need to create a Twitter account and get your own credentials to connect to the Twitter API.
+
+Once you have them, you can create the connection to the database using the *Tweepy* module.
+In my case I was extracting data for tweets related to **NBA** topic.
+
+Once I got all the information using the functions I created, I posted all data to MySQL Database (used MySQL Workbench) on 2 different tables.
+
 
 **Libraries/Modules I used**
 ----------------------------
