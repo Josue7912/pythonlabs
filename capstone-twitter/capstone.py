@@ -58,6 +58,11 @@ def avgtweetlength(tweets):
     return mean
 
 def avg_character_len(tweets):
+    '''
+    Count the average of characters length of a tweet extracted using tweepy
+    :param tweets: it is a list of tweet objects returned from tweepy
+    :return: the mean of all tweets length average
+    '''
     lengtweet = []
     symbols = (".", ",", "/", "'", "!", "¡", "?", "¿", ")", "(", "[", "]", "+", "-", "*", ":", ";", "_")
     for t in tweets:
@@ -72,6 +77,11 @@ def avg_character_len(tweets):
     return mean
 
 def percent_tweet_punctuation(tweets):
+    """
+    It looks on a list of tweets to calculate the percentage of punctuation characters out of a set of tweets
+    :param tweets: it is a list of tweet objects returned from tweepy
+    :return: it returns back the percentage and the mean
+    """
     charcount = 0
     punctcount = 0
     symbols = (".", ",", "/", "'", "!", "¡", "?", "¿", ")", "(", "[", "]", "+", "-", "*", ":", ";", "_")
@@ -91,7 +101,7 @@ def percent_tweet_punctuation(tweets):
     percentage = div * 100
     return percentage, mean
 
-def percent_tweet_hashtag(tweets):
+def percent_tweet_hashtag(tweets): ## Calculates the percentage of characters out of a set of tweets which are hashtags (#)
     hashtagcount = 0
     characcount = 0
     for t in tweets:
@@ -120,6 +130,11 @@ def percent_tweet_mention(tweets):
     return percentage
 
 def common_words(tweets):
+    '''
+    This formula is used to count the most repeated 100 words of a set of tweets, excluding symbols to not be considered as characters/words.
+    :param tweets: it is a list of tweet objects returned from tweepy
+    :return: list of 100 most common words
+    '''
     wordcount = {}
     print("Top 100 common words: ")
     for t in tweets:
@@ -207,6 +222,7 @@ def greatesthour_tweet(tweets):
     greatesthour = max(hours, key=hours.get)
     return greatesthour
 
+'''Here it prints all results from the above functions'''
 
 print("The Average number of followers is: ", avgnum_followers(tweets))
 print("The Average length of tweets (words) is: ", avgtweetlength(tweets))
@@ -224,15 +240,13 @@ print("The hour with major number of tweets is: ", greatesthour_tweet(tweets),"h
 
 
 
-
-
-
-
 ## PUSH TO MYSQL DATABASE
 
 engine = sqlalchemy.create_engine('mysql+pymysql://root:Vero7912.@localhost/twitter')
 connection = engine.connect()
 metadata = sqlalchemy.MetaData()
+
+# Creates a table with the column names you define and its field type:
 
 twitter = sqlalchemy.Table('twitter', metadata,
 sqlalchemy.Column('user_created', sqlalchemy.DateTime()),
@@ -262,6 +276,8 @@ sqlalchemy.Column('greatest_hour_tweets', sqlalchemy.VARCHAR(40)))
 
 metadata.create_all(engine)
 
+''' Using tweet_list you can extract different parameters from the dictionary contained within the json parameter of each tweet to fill the columns you created in the above table'''
+
 tweet_list = [t._json for t in tweets]
 
 for t in tweet_list:
@@ -280,6 +296,7 @@ for t in tweet_list:
     result_proxy = connection.execute(query)
 
 
+# Here you add the results of the above functions and you add them to the second table (tweetresults)
 
 tweetsresults = {'avg_num_tweets': avgtweetxuser(tweets),
                 'tweet_length_char': avg_character_len(tweets),
