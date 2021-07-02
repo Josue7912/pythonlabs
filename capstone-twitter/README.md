@@ -1,4 +1,4 @@
-# **Capstone Project**
+## **Capstone Project**
 
 This is the Capstone Project for the CodingNomads Python Course.
 
@@ -20,7 +20,8 @@ In this project I had to collect data from a bunch of tweets using Tweepy python
 
 Once I got all the information using functions, you are asked to post data to a MySQL Database (used MySQL Workbench).
 
-## **Libraries/Modules I used**
+**Libraries/Modules I used**
+----------------------------
 
 ![image](../12_packages_modules/CodingNomads_files/image.png)
 
