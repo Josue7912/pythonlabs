@@ -7,7 +7,6 @@ import collections
 import sqlalchemy
 import pymysql
 import numpy as np
-from time import gmtime, strftime
 from collections import Counter
 import datetime
 from dateutil.parser import parse
